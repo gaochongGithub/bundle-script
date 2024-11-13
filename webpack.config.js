@@ -10,23 +10,12 @@ const isProduction = process.env.NODE_ENV == 'production';
 const config = {
     entry: './src/index.ts',
     output: {
-        filename: "telegram-minapp.js", // 打包后输出文件的文件名
-        path: path.resolve(__dirname, 'telegram'),
+        filename: "pixi.js", // 打包后输出文件的文件名
+        path: path.resolve(__dirname, 'pixi'),
         library: 'MyLibrary',
         libraryTarget: 'umd',
         // globalObject: 'this' // 解决在 Node.js 环境中 `window` 不存在的问题
     },
-    // output: {
-    //     filename: "raceMain.js", // 打包后输出文件的文件名
-    //     path: path.resolve(__dirname, 'zk'),
-    //     library: 'MyLibrary',
-    //     libraryTarget: 'umd',
-    //     // globalObject: 'this' // 解决在 Node.js 环境中 `window` 不存在的问题
-    // },
-    // output: {
-    //     filename: "zkHoldMain.js", // 打包后输出文件的文件名
-    //     path: path.resolve(__dirname, 'zkhold'),
-    // },
     devServer: {
         open: true,
         host: 'localhost',
